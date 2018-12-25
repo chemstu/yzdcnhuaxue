@@ -165,7 +165,9 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Intervention\Image\ImageServiceProvider::class,
+        Mews\Captcha\CaptchaServiceProvider::class,
+        Brian2694\Toastr\ToastrServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -223,6 +225,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
+        'Toastr'  => Brian2694\Toastr\Facades\Toastr::class,
 
     ],
 

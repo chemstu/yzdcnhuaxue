@@ -45,7 +45,7 @@
 
                     <!-- BEGIN FORM-->
 
-                    <form action="{{route('admin.middlelevel.store')}}"  method="post"  accept-charset="UTF-8" class="form-horizontal">
+                    <form action="{{route('admin.elementarylevel.store')}}"  method="post"  accept-charset="UTF-8" class="form-horizontal">
 
                         @csrf
 
@@ -82,7 +82,7 @@
 
                             <div class="controls">
 
-                                <input type="text" name="middle_name" class=" m-wrap" >
+                                <input type="text" name="elementary_name" class=" m-wrap" >
 
                             </div>
 
@@ -141,9 +141,10 @@
                 $.get('/admin/json-middles?high_level_id=' + high_level_id, function (data) {
                     console.log(data);
                     if(data !=''){
-                        $('#middle_level').show();
+                        $('#middle_level').show(); //联动为空
                         $('#middle_level').empty();
                         $('#middle_level').append('<option value="0" disable="true" selected="true">===选择合适的分类 ===</option>');
+                        //填充查询数据
                         $.each(data, function (index, middlesObj) {
                             $('#middle_level').append('<option value="' + middlesObj.id + '">' + middlesObj.middle_name + '</option>');
                         })

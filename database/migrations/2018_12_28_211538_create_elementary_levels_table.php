@@ -17,7 +17,8 @@ class CreateElementaryLevelsTable extends Migration
             $table->increments('id');
             $table->string('elementary_name');
             $table->integer('sort')->default(0);
-            $table->integer('middle_level_id');
+            $table->integer('middle_level');
+            $table->integer('high_level');
             $table->timestamps();
         });
     }

@@ -14,4 +14,9 @@ class HighLevel extends Model
     {
         return $this->hasMany('App\Http\Models\MiddleLevel');
     }
+
+    public function elementarylevels()
+    {
+        return $this->hasMany('App\Http\Models\ElementaryLevel','high_level');
+    }
 }

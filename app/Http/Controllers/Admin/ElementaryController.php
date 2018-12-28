@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Models\HighLevel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ElementaryLevelController extends Controller
+class ElementaryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +25,9 @@ class ElementaryLevelController extends Controller
      */
     public function create()
     {
-        //
+        $highlevels=HighLevel::all();
+
+        return view('admin.elementary_level_create',compact('highlevels'));
     }
 
     /**

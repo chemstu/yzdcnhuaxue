@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Models\HighLevel;
+use App\Http\Models\MiddleLevel;
+use App\Http\Requests\HighLevelRequest;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 
 class HighLevelController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $highlevels=HighLevel::all();
+        return view('admin.high_level_index',compact('highlevels'));
     }
 
     /**
@@ -23,7 +26,7 @@ class HighLevelController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.high_level_create');
     }
 
     /**
@@ -32,10 +35,14 @@ class HighLevelController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(HighlevelRequest $request,highlevel $highlevel)
     {
-        //
+        $highlevel->fill($request->all());
+        $highlevel->save();
+        Toastr::success('顶级分类添加成功', 'OK');
+        return redirect(route('admin.highlevel.index'));
     }
+
 
     /**
      * Display the specified resource.
@@ -56,7 +63,8 @@ class HighLevelController extends Controller
      */
     public function edit($id)
     {
-        //
+        $highlevel= highlevel::find($id);
+        return view('admin.high_level_edit',compact('highlevel'));
     }
 
     /**
@@ -66,9 +74,12 @@ class HighLevelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(highlevelRequest $request,highlevel $highlevel)
     {
-        //
+        $highlevel->fill($request->all());
+        $highlevel->save();
+        Toastr::success('修改成功', 'OK');
+        return redirect(route('admin.highlevel.index'));
     }
 
     /**
@@ -79,6 +90,40 @@ class HighLevelController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $res=HighLevel::where('id',$id)->delete();
+        if($res){
+            $data = [
+                'status' => 0,
+                'msg' => '删除成功！',
+            ];
+        }else{
+            $data = [
+                'status' => 1,
+                'msg' => '删除失败，请稍后重试！',
+            ];
+        }
+        return $data;
+    }
+
+    //删除所选
+    public function delall(Request $request)
+    {
+        $ids = $request->input('ids');
+        if($ids){
+            HighLevel::whereIn('id', $ids)->delete();
+            Toastr::success('信息删除成功 :)','Success');
+
+        }else{
+            Toastr::info('请选择相关信息 :)');
+        }
+        return redirect(route('admin.highlevel.index'));
+    }
+
+    //获取高级分类下的中级分类
+    public function middlelevels(Request $request)
+    {
+        $high_level_id = Input::get('high_level_id');
+        $middle_levels = MiddleLevel::where('high_level_id', '=', $high_level_id)->get();
+        return response()->json($middle_levels);
     }
 }

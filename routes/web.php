@@ -16,5 +16,12 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin'], function (
     Route::resource('tag', 'TagController');
     Route::any('/tag/delall', 'TagController@delall')->name('tag.delall');
     Route::resource('category', 'CategoryController');
+    Route::any('/highlevel/delall', 'HighLevelController@delall')->name('highlevel.delall');
+    Route::get('/json-middles','HighlevelController@middlelevels');
+    Route::resource('highlevel', 'HighlevelController');
+    Route::any('/middlelevel/delall', 'MiddleLevelController@delall')->name('middlelevel.delall');
+    Route::resource('middlelevel', 'MiddlelevelController');
+    Route::any('/elementary/delall', 'ElementaryController@delall')->name('elementary.delall');
+    Route::resource('elementary', 'ElementaryController');
 
 });

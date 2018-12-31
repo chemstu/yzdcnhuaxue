@@ -2,71 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91fb5c47-8f9e-41dd-ae29-7d2c32ea5ba5" name="New changelist" comment="start">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/oss.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ckfinder/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/middle_level_edit.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/PostController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/ajax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/api.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/appendto.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/assets/inlineall/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/assets/posteddata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/assets/sample.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/assets/uilanguages/languages.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/datafiltering.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/dialog/assets/my_dialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/dialog/dialog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/divreplace.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/enterkey/enterkey.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.fla" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/htmlwriter/outputforflash.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/htmlwriter/outputhtml.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/inlineall.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/inlinebycode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/inlinetextarea.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/jquery.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/magicline/magicline.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/readonly.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/replacebyclass.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/replacebycode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/sample.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/sample.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/sample_posteddata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/tabindex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/toolbar/toolbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/uicolor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/uilanguages.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/wysiwygarea/fullpage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ckeditor/samples/old/xhtmlstyle.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/kcfinder-3.12.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/cropper.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/dropzone.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/lfm.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/mfb.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/adobe.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/folder-1/sleeping-dog.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/word.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/images/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/images/test-folder/sleeping-dog.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/images/test-folder/thumbs/sleeping-dog.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/folder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/loader.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/cropper.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/dropzone.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/jquery.form.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/lfm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/mfb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/script.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HighLevelController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HighLevelController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MiddleLevelController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MiddleLevelController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Models/Category.php" afterPath="$PROJECT_DIR$/app/Http/Models/Category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Models/HighLevel.php" afterPath="$PROJECT_DIR$/app/Http/Models/HighLevel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Models/MiddleLevel.php" afterPath="$PROJECT_DIR$/app/Http/Models/MiddleLevel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ckeditor/config.js" afterPath="$PROJECT_DIR$/public/ckeditor/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ckeditor/plugins/image/dialogs/image.js" afterPath="$PROJECT_DIR$/public/ckeditor/plugins/image/dialogs/image.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/category_index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/category_index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/elementary_level_index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/elementary_level_index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/high_level_index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/high_level_index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/layouts/_head.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/layouts/_head.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/layouts/_sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/layouts/_sidebar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/middle_level_index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/middle_level_index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/post_create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/post_create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/post_index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/post_index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Blog/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Blog/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Blog/post.blade.php" afterPath="$PROJECT_DIR$/resources/views/Blog/post.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/symfony/debug/ExceptionHandler.php" afterPath="$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/symfony/debug/ExceptionHandler.php" />
     </list>
     <list id="af71d3cc-4776-48f5-848c-254d953bc6a3" name="默认" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,11 +35,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExceptionHandler.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/symfony/debug/ExceptionHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="252" column="17" lean-forward="true" selection-start-line="252" selection-start-column="17" selection-end-line="252" selection-end-column="17" />
+              <folding>
+                <marker date="1546266823431" expanded="true" signature="9061:9305" ph="..." />
+                <marker date="1546266823431" expanded="true" signature="9349:9413" ph="..." />
+                <marker date="1546266823431" expanded="true" signature="10740:10816" ph="..." />
+                <marker date="1546266823431" expanded="true" signature="14343:15569" ph="..." />
+                <marker date="1546266823431" expanded="true" signature="14354:15521" ph="..." />
+                <marker date="1546266823431" expanded="true" signature="14472:15509" ph="..." />
+                <marker date="1546266823431" expanded="true" signature="15532:15561" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="d9214db96e799ff734f6a7f0cb1c51aeb36a88d5.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/framework/views/d9214db96e799ff734f6a7f0cb1c51aeb36a88d5.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="474" column="49" lean-forward="false" selection-start-line="474" selection-start-column="49" selection-end-line="474" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -115,6 +100,11 @@
       <find>id:&quot;Upload&quot;</find>
       <find>Lorem ipsum dolor sit amet</find>
       <find>jquery</find>
+      <find>404</find>
+      <find>Home</find>
+      <find>go home</find>
+      <find>Sorry, the page you are looking for could not be found</find>
+      <find>Whoops, looks like something went wrong</find>
     </findStrings>
     <replaceStrings>
       <replace>admin</replace>
@@ -128,9 +118,13 @@
       <replace>elementary</replace>
       <replace>middle</replace>
       <replace>.js')}}</replace>
+      <replace>很遗憾您访问的页面不存在或已经被删除</replace>
+      <replace>哈哈哈，好像有不大不小的错误发生了呢</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\code\cnhuaxue\public\admin\js</dir>
+      <dir>E:\code\cnhuaxue\app</dir>
+      <dir>E:\code\cnhuaxue</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -139,8 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Requests/MiddlelevelRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/elemenary_level_create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Models/ElemenaryLevel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ElementaryController.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/ElementaryRequest.php" />
@@ -190,6 +182,8 @@
         <option value="$PROJECT_DIR$/app/Services/oss.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/post_create.blade.php" />
         <option value="$PROJECT_DIR$/public/ckeditor/config.js" />
+        <option value="$PROJECT_DIR$/storage/framework/views/d9214db96e799ff734f6a7f0cb1c51aeb36a88d5.php" />
+        <option value="$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/symfony/debug/ExceptionHandler.php" />
       </list>
     </option>
   </component>
@@ -355,7 +349,7 @@
       <workItem from="1546181764735" duration="2558000" />
       <workItem from="1546232323218" duration="4721000" />
       <workItem from="1546239467453" duration="1157000" />
-      <workItem from="1546262024390" duration="2271000" />
+      <workItem from="1546262024390" duration="3951000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1545312997827</created>
@@ -368,7 +362,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124165000" />
+    <option name="totallyTimeSpent" value="125845000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -387,6 +381,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3229508" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -399,7 +394,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -453,20 +447,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/layouts/_footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="879">
-          <caret line="45" column="63" lean-forward="false" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Models/Tag.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/elementary_level_create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -792,6 +772,30 @@
         <state relative-caret-position="0">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/d9214db96e799ff734f6a7f0cb1c51aeb36a88d5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="474" column="49" lean-forward="false" selection-start-line="474" selection-start-column="49" selection-end-line="474" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/symfony/debug/ExceptionHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="252" column="17" lean-forward="true" selection-start-line="252" selection-start-column="17" selection-end-line="252" selection-end-column="17" />
+          <folding>
+            <marker date="1546266823431" expanded="true" signature="9061:9305" ph="..." />
+            <marker date="1546266823431" expanded="true" signature="9349:9413" ph="..." />
+            <marker date="1546266823431" expanded="true" signature="10740:10816" ph="..." />
+            <marker date="1546266823431" expanded="true" signature="14343:15569" ph="..." />
+            <marker date="1546266823431" expanded="true" signature="14354:15521" ph="..." />
+            <marker date="1546266823431" expanded="true" signature="14472:15509" ph="..." />
+            <marker date="1546266823431" expanded="true" signature="15532:15561" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

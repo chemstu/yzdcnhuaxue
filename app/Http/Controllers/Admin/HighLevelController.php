@@ -74,8 +74,9 @@ class HighLevelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(highlevelRequest $request,highlevel $highlevel)
+    public function update(highlevelRequest $request,$id)
     {
+        $highlevel=HighLevel::find($id);
         $highlevel->fill($request->all());
         $highlevel->save();
         Toastr::success('修改成功', 'OK');
@@ -90,29 +91,36 @@ class HighLevelController extends Controller
      */
     public function destroy($id)
     {
-        $res=HighLevel::where('id',$id)->delete();
-        if($res){
-            $data = [
-                'status' => 0,
-                'msg' => '删除成功！',
-            ];
-        }else{
+        if(MiddleLevel::where('high_level_id',$id)->count()){
             $data = [
                 'status' => 1,
-                'msg' => '删除失败，请稍后重试！',
+                'msg' => '该高级分类下存在中级分类，请先删除相应的中级分类！',
             ];
+        }else{
+            $res=HighLevel::where('id',$id)->delete();
+            if($res){
+                $data = [
+                    'status' => 0,
+                    'msg' => '删除成功！',
+                ];
+            }
         }
         return $data;
     }
+
 
     //删除所选
     public function delall(Request $request)
     {
         $ids = $request->input('ids');
         if($ids){
-            HighLevel::whereIn('id', $ids)->delete();
-            Toastr::success('信息删除成功 :)','Success');
-
+            $res=MiddleLevel::whereIn('high_level_id', $ids)->count();
+            if ($res){
+                Toastr::warning('该高级分类下存在中级分类，请先删除中级分类成功:)','删除失败');
+            }else{
+                HighLevel::whereIn('id', $ids)->delete();
+                Toastr::success('信息删除成功 :)','Success');
+            }
         }else{
             Toastr::info('请选择相关信息 :)');
         }

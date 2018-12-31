@@ -28,6 +28,8 @@
 
 <link rel="stylesheet" href="{{asset('toastr/toastr.min.css')}}">
 
+<link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
+
 <!-- END GLOBAL MANDATORY STYLES -->
 @section('page-css')
     @show

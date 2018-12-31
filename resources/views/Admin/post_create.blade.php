@@ -90,13 +90,16 @@
 
                             <!-- BEGIN FORM-->
 
-                            <form action="#" class="form-horizontal">
+                            <form action="{{route('admin.post.store')}}"  method="post"
+                                  accept-charset="UTF-8" class="form-horizontal"  enctype="multipart/form-data">
+
+                            @csrf
 
                                 <h3 class="form-section">基本信息</h3>
 
                                 <div class="row-fluid">
 
-                                    <div class="span6 ">
+                                    <div class="span7 ">
 
                                         <div class="control-group">
 
@@ -104,37 +107,26 @@
 
                                             <div class="controls">
 
-                                                <input type="text" class="m-wrap span12" placeholder="Chee Kin">
+                                                <input type="text"  name=" title" class="m-wrap span12" placeholder="标题必填">
 
                                             </div>
 
                                         </div>
 
-                                    </div>
-
-                                    <!--/span-->
-
-
-
-                                </div>
-
-                                <!--/row-->
-
-                                <div class="row-fluid">
-
-                                    <div class="span6 ">
-
                                         <div class="control-group">
 
-                                            <label class="control-label">关键字</label>
+                                            <label class="control-label">所属分类</label>
 
                                             <div class="controls">
 
-                                                <select class="m-wrap span12">
+                                                <select class="m-wrap span12" name="category_id">
 
-                                                    <option value="">Male</option>
+                                                    @foreach($categories as  $category)
 
-                                                    <option value="">Female</option>
+                                                        <option value="{{$category->id}}">{{$category->title}}</option>
+
+                                                    @endforeach
+
 
                                                 </select>
 
@@ -142,63 +134,42 @@
 
                                         </div>
 
-                                    </div>
-
-                                    <!--/span-->
-
-                                </div>
-
-                                <!--/row-->
-
-                                <div class="row-fluid">
-
-                                    <div class="span6 ">
-
                                         <div class="control-group">
 
-                                            <label class="control-label">关键字</label>
+                                            <label class="control-label">文章标签</label>
 
                                             <div class="controls">
-
-                                                <select class="m-wrap span12">
-
-                                                    <option value="">Male</option>
-
-                                                    <option value="">Female</option>
-
+                                                <select  name="tags"data-placeholder="选择合适的文章标签" class="chosen span12" multiple="multiple" tabindex="6">
+                                                        @foreach($tags as  $tag)
+                                                        <option value="{{$tag->id}}">{{$tag->title}}</option>
+                                                    @endforeach
                                                 </select>
 
                                             </div>
 
                                         </div>
 
-                                    </div>
-
-                                    <!--/span-->
-
-                                    <div class="span6 ">
-
                                         <div class="control-group">
 
-                                            <label class="control-label">状态</label>
+                                            <label class="control-label">发布状态</label>
 
                                             <div class="controls">
 
                                                 <label class="radio">
 
-                                                    <div class="radio"><span class="checked"><input type="radio" name="optionsRadios2" value="option1"></span></div>
+                                                    <input type="radio" name="status" value="0" checked />
 
-                                                    Free
-
+                                                    公开
                                                 </label>
 
                                                 <label class="radio">
 
-                                                    <div class="radio"><span class=""><input type="radio" name="optionsRadios2" value="option2" checked=""></span></div>
+                                                    <input type="radio" name="status" value="0"  />
 
-                                                    Professional
-
+                                                    私有
                                                 </label>
+
+
 
                                             </div>
 
@@ -206,29 +177,60 @@
 
                                     </div>
 
-                                    <!--/span-->
+                                    <div class="span5 ">
+
+                                        <div class="control-group">
+
+                                            <label class="control-label">缩略图</label>
+
+                                            <div class="controls">
+
+                                                <div class="fileupload fileupload-new" data-provides="fileupload">
+
+                                                    <div class="fileupload-new thumbnail" style="width: 160px; height:120px;">
+
+                                                        <img src="{{asset('admin/image/AAAAAA&amp;text=no+image')}}" alt="" />
+
+                                                    </div>
+
+                                                    <div class="fileupload-preview fileupload-exists " style="max-width: 160px; max-height: 120px; line-height: 20px;"></div>
+
+                                                    <div>
+
+													<span class="btn btn-file"><span class="fileupload-new">选择图像</span>
+
+													<span class="fileupload-exists">修改</span>
+
+													<input type="file"   name="thumbnail" class="default" /></span>
+
+                                                        <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">删除</a>
+
+                                                    </div>
+
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
 
                                 </div>
 
                                 <h3 class="form-section">文章内容</h3>
 
-                                <!--/row-->
-
                                 <div class="row-fluid">
 
                                     <div class="span12 ">
 
-                                        <div class="control-group">
-
-                                            <label class="control-label">Street</label>
-
                                             <div class="controls">
-                                                <textarea name="editor1" id="editor1" rows="20" cols="60">
+                                                <textarea name="body" id="editor1" rows="20" cols="60">
                                                     文章内容不能为空
                                                 </textarea>
                                             </div>
 
-                                        </div>
+
 
                                     </div>
 
@@ -273,9 +275,78 @@
 
     <script src="{{asset('ckeditor/ckeditor.js')}}" type="text/javascript" ></script>
     <script>
-        // Replace the <textarea id="editor1"> with a CKEditor
-        // instance, using default configuration.
-        CKEDITOR.replace( 'editor1' );
+        CKEDITOR.replace( 'editor1',{
+            filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+            filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?type=Images',
+            filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+            filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'
+                 });
     </script>
+
+    <script src="{{asset('admin/js/jquery-1.10.1.min.js')}}" type="text/javascript"></script>
+
+    <script src="{{asset('admin/js/jquery-migrate-1.2.1.min.js')}}" type="text/javascript"></script>
+
+    <!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js')}} before bootstrap.min.js')}} to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+    <script src="{{asset('admin/js/jquery-ui-1.10.1.custom.min.js')}}" type="text/javascript"></script>
+
+    <script src="{{asset('admin/js/bootstrap.min.js')}}" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+
+    <script src="{{asset('admin/js/excanvas.min.js')}}"></script>
+
+    <script src="{{asset('admin/js/respond.min.js')}}"></script>
+
+    <![endif]-->
+
+    <script src="{{asset('admin/js/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
+
+    <script src="{{asset('admin/js/jquery.blockui.min.js')}}" type="text/javascript"></script>
+
+    <script src="{{asset('admin/js/jquery.cookie.min.js')}}" type="text/javascript"></script>
+
+    <script src="{{asset('admin/js/jquery.uniform.min.js')}}" type="text/javascript" ></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/ckeditor.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/bootstrap-fileupload.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/chosen.jquery.min.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/select2.min.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/wysihtml5-0.3.0.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/bootstrap-wysihtml5.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/jquery.tagsinput.min.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/jquery.toggle.buttons.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/bootstrap-datepicker.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/bootstrap-datetimepicker.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/clockface.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/date.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/daterangepicker.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/bootstrap-colorpicker.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/bootstrap-timepicker.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/jquery.inputmask.bundle.min.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/jquery.input-ip-address-control-1.0.min.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('admin/js/jquery.multi-select.js')}}"></script>
+
+    <script src="{{asset('admin/js/bootstrap-modal.js')}}" type="text/javascript" ></script>
+
+    <script src="{{asset('admin/js/bootstrap-modalmanager.js')}}" type="text/javascript" ></script>
 
 @endsection

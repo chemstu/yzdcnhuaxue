@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="{{asset('admin/css/DT_bootstrap.css')}}" />
 
+
+
 @endsection
 
 @section('content')
@@ -46,6 +48,7 @@
                             <div class="caption"><i class="icon-cogs"></i>列表</div>
 
                             <div class="actions">
+
                                 <a href="{{route('admin.category.create')}}" class="btn green"><i class="icon-plus"></i>新增</a>
 
                             </div>
@@ -104,6 +107,10 @@
 
                                        <a href="javascript:;" onclick="delLink({{$category->id}})"  class="btn mini black""><i class="fa fa-trash-o"></i>删除 </a>
 
+                                        <form id="delete-form-{{ $category->id }}" action="{{ route('admin.category.destroy',$category->id) }}" method="POST" style="display: none;">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
 
                                     </td>
 
@@ -157,33 +164,42 @@
 
     </script>
 
-    <script src="{{ asset('layer/layer.js') }}"></script>
+    <script src="{{asset('alert/jquery-confirm.min.js')}}"></script>
+
+    <link rel="stylesheet" href="{{asset('alert/jquery-confirm.min.css')}}" />
 
     <script type="text/javascript">
 
         function delLink(id) {
-            layer.confirm('您确定要删除信息吗？', {
-                btn: ['确定','取消'] //按钮
-            }, function(){
-                $.post("{{url('admin/category/')}}/"+id,{'_method':'delete','_token':"{{csrf_token()}}"},function (data) {
-
-                    if(data.status==0){
-
-                        location.href = location.href;
-
-
-                        layer.msg(data.msg, {icon: 6});
-
-                    }else{
-
-                        layer.msg(data.msg, {icon: 5});
-
+            $.confirm({
+                //设置icon及其大小 ，大小可为fa-lg (33% 递增), fa-2x, fa-3x, fa-4x, 或 fa-5x
+                icon: 'fa fa-exclamation-triangle fa-2x',
+                closeIcon: true,
+                //设置对话框的宽度
+                boxWidth: '40%',
+                useBootstrap: false,
+                //设置对话框的样式 ，可以为light\dark\modern\'material'\'bootstrap\supervan'
+                theme: 'modern',
+                title: '确定删除所选信息?',
+                content: '一旦删将无法恢复',
+                autoClose: '取消|5000', //必须与下面的取消相同
+                type: 'red',
+                buttons: {
+                    删除: {
+                        text: '删除',
+                        btnClass: 'btn-red', //按钮颜色
+                        action: function () {
+                            event.preventDefault();
+                            document.getElementById('delete-form-'+id).submit();
+                        }
+                    },
+                    取消: function () {
+                        //点击取消按钮后显示
+                       // $.alert('action is canceled');
                     }
-                });
-            }, function(){
+                }
             });
+
         }
     </script>
-
-
 @endsection

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class MiddleLevel extends Model
 {
     protected $fillable = [
-        'middle_name','sort','high_level_id',
+        'id', 'middle_name','sort','high_level_id',
     ];
 
     public function highlevel()

@@ -93,18 +93,9 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        $res=Category::where('id',$id)->delete();
-        if($res){
-            $data = [
-                'status' => 0,
-                'msg' => '删除成功！',
-            ];
-        }else{
-            $data = [
-                'status' => 1,
-                'msg' => '删除失败，请稍后重试！',
-            ];
-        }
-        return $data;
+        Category::where('id',$id)->delete();
+        Toastr::success('删除成功', 'OK');
+        return redirect(route('admin.category.index'));
+
     }
 }

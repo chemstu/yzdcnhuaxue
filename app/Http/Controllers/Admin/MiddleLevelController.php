@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Models\ElementaryLevel;
 use App\Http\Models\HighLevel;
 use App\Http\Models\MiddleLevel;
 use App\Http\Requests\MiddlelevelRequest;
@@ -11,11 +12,6 @@ use App\Http\Controllers\Controller;
 
 class MiddleLevelController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $middlelevels=MiddleLevel::with('highlevel')->get();
@@ -23,11 +19,6 @@ class MiddleLevelController extends Controller
     }
 
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         $highlevels=HighLevel::all();
@@ -35,12 +26,6 @@ class MiddleLevelController extends Controller
         return view('admin.middle_level_create',compact('highlevels'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(MiddlelevelRequest $request,MiddleLevel $middlelevel)
     {
         $middlelevel->fill($request->all());
@@ -49,38 +34,26 @@ class MiddleLevelController extends Controller
         return redirect(route('admin.middlelevel.index'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $highlevels=HighLevel::all();
+        $middlelevel= Middlelevel::with('highlevel')->find($id);
+        return view('admin.middle_level_edit',compact('highlevels','middlelevel'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+
+    public function update(MiddlelevelRequest $request,$id)
     {
-        //
+        $middleLevel=MiddleLevel::find($id);
+        $middleLevel->fill($request->all());
+        $middleLevel->save();
+        Toastr::success('修改成功', 'OK');
+        return redirect(route('admin.middlelevel.index'));
     }
 
     /**
@@ -91,17 +64,19 @@ class MiddleLevelController extends Controller
      */
     public function destroy($id)
     {
-        $res=MiddleLevel::where('id',$id)->delete();
-        if($res){
-            $data = [
-                'status' => 0,
-                'msg' => '删除成功！',
-            ];
-        }else{
+        if(ElementaryLevel::where('middle_level',$id)->count()){
             $data = [
                 'status' => 1,
-                'msg' => '删除失败，请稍后重试！',
+                'msg' => '该高级分类下存在中级分类，请先删除相应的中级分类！',
             ];
+        }else{
+            $res=MiddleLevel::where('id',$id)->delete();
+            if($res){
+                $data = [
+                    'status' => 0,
+                    'msg' => '删除成功！',
+                ];
+            }
         }
         return $data;
     }
@@ -111,8 +86,13 @@ class MiddleLevelController extends Controller
     {
         $ids = $request->input('ids');
         if($ids){
-            MiddleLevel::whereIn('id', $ids)->delete();
-            Toastr::success('信息删除成功 :)','Success');
+            $res=ElementaryLevel::whereIn('middle_level', $ids)->count();
+            if ($res){
+                Toastr::warning('该中级分类下存在低级分类，请先删除低级分类:)','删除失败');
+            }else{
+                MiddleLevel::whereIn('id', $ids)->delete();
+                Toastr::success('信息删除成功 :)','Success');
+            }
 
         }else{
             Toastr::info('请选择相关信息 :)');

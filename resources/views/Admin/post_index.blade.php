@@ -84,89 +84,30 @@
 
                                 <tbody>
 
-                                <tr class="odd gradeX">
+                                @foreach($posts as $post)
 
-                                    <td><input type="checkbox" class="checkboxes" value="1" /></td>
+                                    <tr class="odd gradeX">
 
-                                    <td>34343244ddddddd</td>
+                                        <td><input type="checkbox" class="checkboxes" value="1" /></td>
 
-                                    <td class="hidden-480"><a href="mailto:shuxer@gmail.com">shuxer@gmail.com</a></td>
+                                        <td>{{$post->title}}</td>
 
-                                    <td class="hidden-480" ><span class="label label-success">私有</span></td>
+                                        <td class="hidden-480">{{$post->category->id}}</td>
 
-                                    <td>
-                                        <span class="icon-eye-open" style="margin:10px,10px"> 查看 </span>
+                                        <td class="hidden-480" ><span class="label label-success">私有</span></td>
 
-                                        <span class="icon-edit"  style="margin-left: 10px"> 编辑 </span>
+                                        <td>
+                                            <span class="icon-eye-open" style="margin:10px,10px"> 查看 </span>
 
-                                        <span class="icon-trash" style="margin-left: 10px" > 删除 </span>
+                                            <span class="icon-edit"  style="margin-left: 10px"> 编辑 </span>
 
-                                    </td>
+                                            <span class="icon-trash" style="margin-left: 10px" > 删除 </span>
 
-                                </tr>
+                                        </td>
 
-                                <tr class="odd gradeX">
+                                    </tr>
 
-                                    <td><input type="checkbox" class="checkboxes" value="1" /></td>
-
-                                    <td>ww</td>
-
-                                    <td class="hidden-480"><a href="mailto:shuxer@gmail.com">shuxer@gmail.com</a></td>
-
-                                    <td class="hidden-480" ><span class="label label-success">私有</span></td>
-
-                                    <td>
-                                        <span class="label label-success">查看</span>
-
-                                        <span class="label label-success">编辑</span>
-
-                                        <span class="label label-success">删除</span>
-
-                                    </td>
-
-                                </tr>
-
-                                <tr class="odd gradeX">
-
-                                    <td><input type="checkbox" class="checkboxes" value="1" /></td>
-
-                                    <td>shuxer</td>
-
-                                    <td class="hidden-480"><a href="mailto:shuxer@gmail.com">shuxer@gmail.com</a></td>
-
-                                    <td class="hidden-480" ><span class="label label-success">公开</span></td>
-
-                                    <td>
-                                        <span class="label label-success">查看</span>
-
-                                        <span class="label label-success">编辑</span>
-
-                                        <span class="label label-success">删除</span>
-
-                                    </td>
-
-                                </tr>
-
-                                <tr class="odd gradeX">
-
-                                    <td><input type="checkbox" class="checkboxes" value="1" /></td>
-
-                                    <td>zq</td>
-
-                                    <td class="hidden-480"><a href="mailto:shuxer@gmail.com">shuxer@gmail.com</a></td>
-
-                                    <td class="hidden-480" ><span class="label label-success">私有</span></td>
-
-                                    <td>
-                                        <span class="label label-success">查看</span>
-
-                                        <span class="label label-success">编辑</span>
-
-                                        <span class="label label-success">删除</span>
-
-                                    </td>
-
-                                </tr>
+                                @endforeach
 
                                 </tbody>
 

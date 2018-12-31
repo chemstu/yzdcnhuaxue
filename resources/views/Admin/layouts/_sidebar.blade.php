@@ -10,6 +10,7 @@
             <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 
         </li>
+
         <li class="start active ">
 
             <a href="{{route('admin.dashboard')}}">
@@ -39,7 +40,16 @@
 
                 <li >
 
-                    <a href="layout_horizontal_sidebar_menu.html">
+                    <a href="{{route('admin.post.create')}}">
+
+                        添加文章</a>
+
+                </li>
+                
+
+                <li >
+
+                    <a href="{{route('admin.category.index')}}">
 
                         文章分类</a>
 
@@ -61,11 +71,62 @@
 
                 </li>
 
+
+
+            </ul>
+
+        </li>
+        <li class="">
+
+            <a href="javascript:;">
+
+                <i class="icon-cogs"></i>
+
+                <span class="title">下载模块</span>
+
+                <span class="arrow "></span>
+
+            </a>
+
+            <ul class="sub-menu">
+
                 <li >
 
-                    <a href="{{route('admin.post.create')}}">
+                    <a href="layout_horizontal_sidebar_menu.html">
 
-                       添加文章</a>
+                        添加资源</a>
+
+                </li>
+
+                <li >
+
+                    <a href="layout_horizontal_sidebar_menu.html">
+
+                        资源列表</a>
+
+                </li>
+
+                <li >
+
+                    <a href="{{route('admin.highlevel.index')}}">
+
+                       高级分类</a>
+
+                </li>
+
+                <li >
+
+                    <a href="{{route('admin.middlelevel.index')}}">
+
+                        中级列表</a>
+
+                </li>
+
+                <li >
+
+                    <a href="{{route('admin.elementarylevel.index')}}">
+
+                        低级分类</a>
 
                 </li>
 

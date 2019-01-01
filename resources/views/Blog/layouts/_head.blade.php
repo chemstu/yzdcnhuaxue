@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>@yield('title','中学化学研究院')</title>
+<title>@yield('title','Chemboy')-中学化学研究院</title>
 <!-- Bootstrap core CSS -->
 <link href="{{asset('blog/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 <!-- Custom fonts for this template -->

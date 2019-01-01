@@ -27,4 +27,10 @@ class TagRequest extends FormRequest
             'title' => 'required',
         ];
     }
+    public function messages()
+    {
+        return [
+            'title.required' => '标签名称不能为空',
+        ];
+    }
 }

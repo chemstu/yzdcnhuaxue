@@ -42,6 +42,7 @@ class PostController extends Controller
 
     public function store(PostRequest $request,Post $post)
     {
+
         $post->fill($request->all());
         if ($request->hasFile('thumbnail')) {
         //带扩展名的文件名
@@ -63,6 +64,7 @@ class PostController extends Controller
             $post->thumbnail=$file_name;
         }
         $post->save();
+        $post->tags()->sync($request->tags);
         Toastr::success('文章添加成功', 'OK');
         return redirect(route('admin.post.index'));
     }

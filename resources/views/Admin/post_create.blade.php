@@ -139,7 +139,8 @@
                                             <label class="control-label">文章标签</label>
 
                                             <div class="controls">
-                                                <select  name="tags"data-placeholder="选择合适的文章标签" class="chosen span12" multiple="multiple" tabindex="6">
+
+                                                <select  name="tags[]" data-placeholder="选择合适的文章标签" class="chosen span12" multiple="multiple" tabindex="6">
                                                         @foreach($tags as  $tag)
                                                         <option value="{{$tag->id}}">{{$tag->title}}</option>
                                                     @endforeach
@@ -168,8 +169,6 @@
 
                                                     私有
                                                 </label>
-
-
 
                                             </div>
 
@@ -283,23 +282,6 @@
                  });
     </script>
 
-    <script src="{{asset('admin/js/jquery-1.10.1.min.js')}}" type="text/javascript"></script>
-
-    <script src="{{asset('admin/js/jquery-migrate-1.2.1.min.js')}}" type="text/javascript"></script>
-
-    <!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js')}} before bootstrap.min.js')}} to fix bootstrap tooltip conflict with jquery ui tooltip -->
-
-    <script src="{{asset('admin/js/jquery-ui-1.10.1.custom.min.js')}}" type="text/javascript"></script>
-
-    <script src="{{asset('admin/js/bootstrap.min.js')}}" type="text/javascript"></script>
-
-    <!--[if lt IE 9]>
-
-    <script src="{{asset('admin/js/excanvas.min.js')}}"></script>
-
-    <script src="{{asset('admin/js/respond.min.js')}}"></script>
-
-    <![endif]-->
 
     <script src="{{asset('admin/js/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
 

@@ -2,7 +2,9 @@
 
 
 Route::group(['namespace'=>'Front'], function () {
-    Route::get('/', 'PostController@index');
+    Route::get('/', 'PostController@index')->name('homepage');
+    Route::get('/category/{category}', 'PostController@category')->name('category');
+    Route::get('/tag/{tag}', 'PostController@tag')->name('tag');
     Route::resource('post', 'PostController');
 
 });

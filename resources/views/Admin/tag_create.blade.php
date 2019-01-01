@@ -32,6 +32,8 @@
 
             <div class="portlet box blue ">
 
+                @include('error')
+
                 <div class="portlet-title">
 
                     <div class="caption"><i class="icon-reorder"></i>标签信息</div>
@@ -48,11 +50,11 @@
 
                         <div class="control-group">
 
-                            <label class="control-label">标签名称</label>
+                            <label class="control-label">标签名称 <span class="required">*</span></label>
 
                             <div class="controls">
 
-                                <input type="text" name="title" class=" m-wrap" >
+                                <input type="text"  required="required" name="title" class=" m-wrap" >
 
                             </div>
 
@@ -88,6 +90,9 @@
 @endsection
 
 @section('page-js')
-
-
+    <script src="{{asset('vendors/parsleyjs/dist/parsley.min.js')}}"></script>
+    <script src="{{asset('vendors/parsleyjs/dist/i18n/zh_cn.js')}}"></script>
+    <script>
+        $('#form').parsley();
+    </script>
 @endsection

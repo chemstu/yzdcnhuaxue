@@ -1,5 +1,5 @@
 @extends('blog.layouts.app')
-@section('title','Blog主页-中学化学教学研究')
+@section('title', isset($category->title) ? $category->title: '站点主页')
 @section('bg-img',asset('blog/img/home-bg.jpg'))
 @section('content')
     <div class="container">
@@ -7,7 +7,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 @foreach($posts as $post)
                 <div class="post-preview">
-                    <a href="{{route('post.show',$post->id)}}">
+                    <a href="{{route('post.show',$post->slug)}}">
                         <h2 class="post-title">
                             {{$post->title}}
                         </h2>
@@ -22,9 +22,7 @@
                 <hr>
                 @endforeach
                 <!-- Pager -->
-                <div class="clearfix">
-                    <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-                </div>
+                {{$posts->links()}}
             </div>
         </div>
     </div>

@@ -15,6 +15,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191); //避免1071错误，5,7以上数据库不需要
 
+        \Carbon\Carbon::setLocale('zh');    //中文显示友好时间戳
+
     }
 
     /**

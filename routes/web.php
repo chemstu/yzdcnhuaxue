@@ -1,9 +1,8 @@
 <?php
-Route::get('/', 'Front\PostController@index');
 
 
 Route::group(['namespace'=>'Front'], function () {
-
+    Route::get('/', 'PostController@index');
     Route::resource('post', 'PostController');
 
 });

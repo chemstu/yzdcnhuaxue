@@ -33,3 +33,5 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin'], function (
     Route::resource('elementarylevel', 'ElementaryLevelController');
 
 });
+
+Auth::routes();

@@ -13,7 +13,8 @@ Route::group(['namespace'=>'Front'], function () {
 Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin'], function () {
 
     Route::get('dashboard', 'HomeController@index')->name('dashboard');
-    Route::get('login', 'HomeController@login')->name('login');
+    Route::get('login', 'AdminAuth\LoginController@showLoginForm')->name('login');
+    Route::post('login', 'AdminAuth\LoginController@login')->name('login.submit');
 
     Route::resource('tag', 'TagController');
     Route::any('/tag/delall', 'TagController@delall')->name('tag.delall');

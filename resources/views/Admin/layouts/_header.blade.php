@@ -170,7 +170,7 @@
 
                             <a href="inbox.html?a=view">
 
-                                <span class="photo"><img src="{{asset('admin/image/avatar2.jpg')}}" alt="" /></span>
+                                <span class="photo"></span>
 
                                 <span class="subject">
 
@@ -196,7 +196,7 @@
 
                             <a href="inbox.html?a=view">
 
-                                <span class="photo"><img src="./{{asset('admin/image/avatar3.jpg" alt="" /></span>
+                                <span class="photo"><img src="{{asset('admin/image/avatar3.jpg')}}" alt="" /></span>
 
                                 <span class="subject">
 
@@ -222,7 +222,7 @@
 
                             <a href="inbox.html?a=view">
 
-                                <span class="photo"><img src="./{{asset('admin/image/avatar1.jpg" alt="" /></span>
+                                <span class="photo"><img src="{{asset('admin/image/avatar1.jpg')}}'" alt="" /></span>
 
                                 <span class="subject">
 
@@ -448,7 +448,16 @@
 
                         <li><a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a></li>
 
-                        <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+                        <li>
+                            <a href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                <i class="icon-key"></i> Log Out</a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
 
                     </ul>
 

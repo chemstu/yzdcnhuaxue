@@ -15,11 +15,12 @@ use Intervention\Image\Facades\Image;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+
+
     public function index()
     {
         $posts=Post::with('category')->get();

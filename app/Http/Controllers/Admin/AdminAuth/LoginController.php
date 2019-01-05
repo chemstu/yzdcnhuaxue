@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-     protected $redirectTo = '/';
 
      public function __construct()
     {
@@ -23,9 +22,7 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        
-
-        $this->validate($request, [
+         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required|min:6'
         ]);
@@ -43,5 +40,12 @@ class LoginController extends Controller
         // If Unsuccessful, then redirect back to the login with the form data
         return redirect()->back()->withInput($request->only('email', 'remember'));
     }
+
+    public function logout(Request $request)
+    {
+        Auth::guard('admin')->logout();
+        return redirect('/');
+    }
+
 
 }

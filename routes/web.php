@@ -15,6 +15,8 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin'], function (
     Route::get('dashboard', 'HomeController@index')->name('dashboard');
     Route::get('login', 'AdminAuth\LoginController@showLoginForm')->name('login');
     Route::post('login', 'AdminAuth\LoginController@login')->name('login.submit');
+    Route::post('/logout', 'AdminAuth\LoginController@logout')->name('logout');
+
 
     Route::resource('tag', 'TagController');
     Route::any('/tag/delall', 'TagController@delall')->name('tag.delall');

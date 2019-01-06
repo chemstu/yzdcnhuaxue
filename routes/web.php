@@ -17,6 +17,15 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin'], function (
     Route::post('login', 'AdminAuth\LoginController@login')->name('login.submit');
     Route::post('/logout', 'AdminAuth\LoginController@logout')->name('logout');
 
+    //重置密码
+    Route::get('/password/reset', 'AdminAuth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+    Route::post('/password/email', 'AdminAuth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+    Route::get('/password/reset/{token}', 'AdminAuth\ResetPasswordController@showResetForm')->name('password.reset');
+    Route::post('/password/reset', 'AdminAuth\ResetPasswordController@reset');
+
+    // Registration Routes...
+    Route::get('register', 'AdminAuth\RegisterController@showRegistrationForm');
+    Route::post('register', 'AdminAuth\RegisterController@register')->name('register');
 
     Route::resource('tag', 'TagController');
     Route::any('/tag/delall', 'TagController@delall')->name('tag.delall');
